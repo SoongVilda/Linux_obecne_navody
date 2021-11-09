@@ -38,3 +38,20 @@ browser.cache.disk.enable=false
 <dd>Zdroje:</dd>
 <dd>https://wiki.archlinux.org/title/firefox</dd>
 <dd>https://wiki.archlinux.org/title/Firefox/Tweaks</dd>
+
+### Pro uživatele Waylandu
+Osobně už trvale používám Wayland na KDE Plasma (Ultrabook s Intel Xe)
+1. Otevři terminál a spusť příkaz ```MOZ_ENABLE_WAYLAND=1 firefox```
+2. Pokud Firefox běží v pohodě a zdá se ti, že plynuleji (Já to testuji na plynulosti Facebook - nejvíce náročný a zasekaný web, co znám), jako mně s Intel Xe, tak gratuluji!
+3. Jdi na ```about:support``` a zkontroluj, jestli najdeš ```MOZ_ENABLE_WAYLAND``` s hodnotou ```1```
+<dd> Nyní máš jistotu, že ti Firefox pracuje s Waylandem. Ať Firefox nemusíš vždy zapínat přes terminál pokračuj níže. </dd>
+
+1. ```sudo nano /etc/environment```
+2. Přidej hodnotu ```MOZ_ENABLE_WAYLAND=1``` a ulož to.
+3. Restartuj počítač.
+4. Firefox otevři přes ikonu. 
+5. Zkontroluj ```about:support``` a že je zde ```MOZ_ENABLE_WAYLAND``` s hodnotou ```1```
+6. Hotovo, máš Firefox fungující na Waylandu s hardwarovou akcelerací.
+
+<dd>Zdroje:</dd>
+<dd>https://wiki.archlinux.org/title/firefox#Wayland</dd>
