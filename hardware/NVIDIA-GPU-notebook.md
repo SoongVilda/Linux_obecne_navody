@@ -80,11 +80,11 @@ Vždy, když budeš potřebovat něco spustit s NVIDIA GPU, stačí zadat.
 ```
 prime-run program
 ```
-- Příklad 1. Spuštění hry Xonotic s NVIDIA GPU. 
+Příklad 1: Spuštění hry Xonotic s NVIDIA GPU. 
 ```
 prime-run xonotic-sdl
 ```
-- Příklad 2. Spuštění programu na úpravu fotek darktable s NVIDIA GPU.
+Příklad 2: Spuštění programu na úpravu fotek darktable s NVIDIA GPU.
 ```
 prime-run darktable
 ```
