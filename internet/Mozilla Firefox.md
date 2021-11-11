@@ -7,6 +7,7 @@ Inspirováno Arch Wiki a tipy ode mě. S tímto nastavením je např. Facebook n
 Potřebuješ Firefox 94 a novější. Napiš do URL řádku ```about:config```. Následně nastav všechny hodnoty, jako je zmíněno níže.
 
 ### Citlivá nastavení, pokud ti panely Firefoxu padají, hodnoty vrať do počátečního stavu.
+Takto mi to fungovalo na NVIDIA GeForce GTX960 bez jediného problému.
 ```
 media.ffvpx.enabled=false
 media.rdd-vpx.enabled=false
@@ -14,6 +15,7 @@ media.ffmpeg.vaapi.enabled=true
 media.navigator.mediadatadecoder_vpx_enabled=true
 ```
 ### Oprava citlivých nastavení varianta 1
+Takto mi to fungovalo na Intel Xe (TGL2) bez jediného problému.
 ```
 media.ffvpx.enabled=true
 media.rdd-vpx.enabled=true
