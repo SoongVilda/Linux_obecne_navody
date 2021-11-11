@@ -24,6 +24,7 @@ media.navigator.mediadatadecoder_vpx_enabled=true
 ```
 
 ### Méně citlivá nastavení, měly by fungovat stabilně.
+Tohle mi fungovalo zatím na každé hardwarové konfiguraci, která mi přišla pod ruce.
 ```
 gfx.webrender.all=true
 gfx.webrender.compositor=true
