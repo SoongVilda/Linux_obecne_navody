@@ -15,7 +15,7 @@ media.ffmpeg.vaapi.enabled=true
 media.navigator.mediadatadecoder_vpx_enabled=true
 ```
 ### Oprava citlivých nastavení varianta 1
-Takto mi to fungovalo na Intel Xe (TGL2) bez jediného problému.
+Takto mi to fungovalo na Intel(R) Xe Graphics (TGL GT2) bez jediného problému.
 ```
 media.ffvpx.enabled=true
 media.rdd-vpx.enabled=true
