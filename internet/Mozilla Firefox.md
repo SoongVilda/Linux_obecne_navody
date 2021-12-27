@@ -55,6 +55,17 @@ Osobně už trvale používám Wayland na KDE Plasma (Ultrabook s Intel Xe)
 4. Firefox otevři přes ikonu. 
 5. Zkontroluj ```about:support``` a že je zde ```MOZ_ENABLE_WAYLAND``` s hodnotou ```1```
 6. Hotovo, máš Firefox fungující na Waylandu s hardwarovou akcelerací.
-
+## Testováno na zařízení: Dell Inspiron 14z (5406)
+```
+Operační systém: Arch Linux
+Verze KDE Plasma: 5.23.4
+Verze KDE Frameworks: 5.89.0
+Verze Qt: 5.15.2
+Verze jádra: 5.15.11-zen1-1-zen (64-bit)
+Grafická platforma: Wayland
+Procesorů: 8 × 11th Gen Intel® Core™ i5-1135G7 @ 2.40GHz
+Paměť: 7,5 GiB RAM
+Grafický procesor: Mesa Intel® Xe Graphics
+```
 <dd>Zdroje:</dd>
 <dd>https://wiki.archlinux.org/title/firefox#Wayland</dd>
