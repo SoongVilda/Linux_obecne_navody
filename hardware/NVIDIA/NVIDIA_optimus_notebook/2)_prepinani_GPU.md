@@ -38,3 +38,5 @@ Pokud chceš zapnout hru ve Steamu s NVIDIA GPU, stačí zadat následující p�
 __NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only __GLX_VENDOR_LIBRARY_NAME=nvidia %command%
 ```
 To je vše k základní funkčnosti NVIDIA GPU.
+<dd> Zdroje: </dd>
+https://download.nvidia.com/XFree86/Linux-x86_64/435.17/README/primerenderoffload.html
