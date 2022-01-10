@@ -3,10 +3,6 @@ Zde je postup, jak můžeš zprovoznit NVENC na Linuxu, protože po pouhé insta
 
 1. Zadej do terminálu příkaz.
 ```
-sudo nvidia-modprobe nvidia_uvm
-```
-2. Zadej do terminálu příkaz.
-```
 sudo nano /etc/udev/rules.d/70-nvidia.rules
 ```
 3. Zkopíruj následující text.
@@ -14,8 +10,8 @@ sudo nano /etc/udev/rules.d/70-nvidia.rules
 ACTION=="add", DEVPATH=="/bus/pci/drivers/nvidia", RUN+="/usr/bin/nvidia-modprobe -c0 -u"
 ```
 4. Vlož zkopírovány text.
-5. Uložit.
-6. Zavřít.
+5. Ulož to klávesovou zkratkou ```CTRL O```
+6. Zavři nano klávesovou zkratkou ```CTRL X```
 
 ## Udržení modulu nvidia_uvm.
 1. Do terminálu zadej ```sudo nano /etc/mkinitcpio.conf```
