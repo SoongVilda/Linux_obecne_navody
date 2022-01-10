@@ -68,29 +68,29 @@ OpenGL renderer string: Mesa Intel(R) Xe Graphics (TGL GT2)
 ```
 3. Nyní přidáme příkaz. 
 ```
-prime-run
+__NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only __GLX_VENDOR_LIBRARY_NAME=nvidia
 ```
 4. Takže celý příkaz bude vypadat takto. 
 ```
-prime-run glxinfo | grep "OpenGL renderer"
+__NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only __GLX_VENDOR_LIBRARY_NAME=nvidia glxinfo | grep "OpenGL renderer"
 ```
 5. Pokud se ti ukázala NVIDIA karta, gratluji, vše funguje!
 ## Práce s přepínáním karet.
 Vždy, když budeš potřebovat něco spustit s NVIDIA GPU, stačí zadat.
 ```
-prime-run program
+__NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only __GLX_VENDOR_LIBRARY_NAME=nvidia program
 ```
 Příklad 1: Spuštění hry Xonotic s NVIDIA GPU. 
 ```
-prime-run xonotic-sdl
+__NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only __GLX_VENDOR_LIBRARY_NAME=nvidia xonotic-sdl
 ```
 Příklad 2: Spuštění programu na úpravu fotek darktable s NVIDIA GPU.
 ```
-prime-run darktable
+__NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only __GLX_VENDOR_LIBRARY_NAME=nvidia darktable
 ```
 ### Steam
 Pokud chceš zapnout hru ve Steamu s NVIDIA GPU, stačí zadat následující příkaz.
 ```
-prime-run %command%
+__NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only __GLX_VENDOR_LIBRARY_NAME=nvidia %command%
 ```
 To je vše k základní funkčnosti NVIDIA GPU.
