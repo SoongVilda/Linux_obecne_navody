@@ -4,7 +4,7 @@ Inspirováno Arch Wiki a tipy ode mě. S tímto nastavením je např. Facebook n
 - Testováno na NVIDIA GeForce GTX960. (Kompletně funkční!)
 - Testováno na Intel Xe (Citlivá nastavení s variantou 1)
 
-Potřebuješ Firefox 94 a novější. Napiš do URL řádku ```about:config```. Následně nastav všechny hodnoty, jako je zmíněno níže.
+Potřebuješ Firefox 96 a novější. Napiš do URL řádku ```about:config```. Následně nastav všechny hodnoty, jako je zmíněno níže.
 
 ### Citlivá nastavení, pokud ti panely Firefoxu padají, hodnoty vrať do počátečního stavu.
 Takto mi to fungovalo na NVIDIA GeForce GTX960 bez jediného problému.
@@ -18,8 +18,10 @@ media.navigator.mediadatadecoder_vpx_enabled=true
 Takto mi to fungovalo na Intel(R) Xe Graphics (TGL GT2) bez jediného problému.
 ```
 media.ffvpx.enabled=true
+media.rdd-process.enabled=true
 media.rdd-vpx.enabled=true
-media.ffmpeg.vaapi.enabled=false
+media.rdd-ffmpeg.enabled=true
+media.ffmpeg.vaapi.enabled=true
 media.navigator.mediadatadecoder_vpx_enabled=true
 ```
 
@@ -43,11 +45,11 @@ browser.cache.disk.enable=false
 <dd>https://wiki.archlinux.org/title/Firefox/Tweaks</dd>
 
 ### Pro uživatele Waylandu
-Osobně už trvale používám Wayland na KDE Plasma (Ultrabook s Intel Xe)
+Osobně už trvale používám Wayland na KDE Plasma (notebook s Intel Xe)
 1. Otevři terminál a spusť příkaz ```MOZ_ENABLE_WAYLAND=1 firefox```
-2. Pokud Firefox běží v pohodě a zdá se ti, že plynuleji (Já to testuji na plynulosti Facebook - nejvíce náročný a zasekaný web, co znám), jako mně s Intel Xe, tak gratuluji!
+2. Pokud Firefox běží v pohodě a zdá se ti, že plynuleji (Já to testuji na plynulosti Facebook - nejvíce náročný a zasekaný web, který znám), jako mně s Intel Xe, tak gratuluji!
 3. Jdi na ```about:support``` a zkontroluj, jestli najdeš ```MOZ_ENABLE_WAYLAND``` s hodnotou ```1```
-<dd> Nyní máš jistotu, že ti Firefox pracuje s Waylandem. Ať Firefox nemusíš vždy zapínat přes terminál pokračuj níže. </dd>
+<dd> Nyní máš jistotu, že Firefox pracuje s Waylandem. Ať Firefox nemusíš vždy zapínat přes terminál pokračuj níže. </dd>
 
 1. ```sudo nano /etc/environment```
 2. Přidej hodnotu ```MOZ_ENABLE_WAYLAND=1``` a ulož to.
@@ -58,10 +60,10 @@ Osobně už trvale používám Wayland na KDE Plasma (Ultrabook s Intel Xe)
 ## Testováno na zařízení: Dell Inspiron 14z (5406)
 ```
 Operační systém: Arch Linux
-Verze KDE Plasma: 5.23.4
-Verze KDE Frameworks: 5.89.0
+Verze KDE Plasma: 5.23.5
+Verze KDE Frameworks: 5.90.0
 Verze Qt: 5.15.2
-Verze jádra: 5.15.11-zen1-1-zen (64-bit)
+Verze jádra: 5.15.13-zen1-1-zen (64-bit)
 Grafická platforma: Wayland
 Procesorů: 8 × 11th Gen Intel® Core™ i5-1135G7 @ 2.40GHz
 Paměť: 7,5 GiB RAM
