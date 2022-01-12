@@ -1,14 +1,14 @@
 #!/bin/bash
-#Installation NVIDIA drivers
+#Instalace NVIDIA ovladačů.
 pacman -S --needed egl-wayland libvdpau libxnvctrl nvidia-dkms nvidia-settings nvidia-utils opencl-nvidia cuda lib32-libvdpau lib32-nvidia-utils lib32-opencl-nvidia vulkan-icd-loader lib32-vulkan-icd-loader
 
-#creating the device nodes for proper workload NVENC
+#Vytvoření nodů pro správnou funkci NVENC
 nvidia-modprobe
 
-#Hardware accelerated video encoding with NVENC
+#Hardwareově akcelerovaný video encoding s NVENC.
 echo 'ACTION=="add", DEVPATH=="/bus/pci/drivers/nvidia", RUN+="/usr/bin/nvidia-modprobe -c0 -u"' > /etc/udev/rules.d/70-nvidia.rules
 
-#PCI-Express Runtime D3 (RTD3) Power Management
+#PCI-Express Runtime D3 (RTD3) Power Management.
 echo '# Remove NVIDIA USB xHCI Host Controller devices, if present
 ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x0c0330", ATTR{remove}="1"
 
@@ -29,13 +29,13 @@ ACTION=="unbind", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x0302
 #Dynamic power management
 echo 'options nvidia "NVreg_DynamicPowerManagement=0x02"' > /etc/modprobe.d/nvidia-pm.conf
 
-#Enable the nvidia-persistenced service to not make the kernel tear down the device state whenever the NVIDIA device resources are no longer in use.
+#Povolí službu nvidia-persistenced, aby jádro nezrušilo stav zařízení, kdykoli se prostředky zařízení NVIDIA již nepoužívají.
 systemctl enable nvidia-persistenced
 systemctl start nvidia-persistenced
 
-#Rebuild initramfs
+#Znovu vytovření obrazu kernelu.
 mkinitcpio -P
 
-#Loading new rules
+#Načtení nových pravidel.
 udevadm control --reload
 udevadm trigger
