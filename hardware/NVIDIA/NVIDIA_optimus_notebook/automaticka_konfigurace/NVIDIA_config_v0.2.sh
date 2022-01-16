@@ -1,9 +1,12 @@
 #!/bin/bash
+
+if [ "$EUID" -ne 0 ]
+  then echo "Prosím, spusť script se sudo"
+  exit 1
+fi
+
 #Instalace NVIDIA ovladačů.
 pacman -S --needed egl-wayland libvdpau libxnvctrl nvidia-dkms nvidia-settings nvidia-utils opencl-nvidia cuda lib32-libvdpau lib32-nvidia-utils lib32-opencl-nvidia vulkan-icd-loader lib32-vulkan-icd-loader
-
-#Vytvoření nodů pro správnou funkci NVENC
-nvidia-modprobe
 
 #Hardwareově akcelerovaný video encoding s NVENC.
 echo 'ACTION=="add", DEVPATH=="/bus/pci/drivers/nvidia", RUN+="/usr/bin/nvidia-modprobe -c0 -u"' > /etc/udev/rules.d/70-nvidia.rules
