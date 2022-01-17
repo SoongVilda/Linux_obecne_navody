@@ -28,7 +28,7 @@ Include = /etc/pacman.d/mirrorlist
 ## Instalace NVIDIA ovladačů pomocí správce balíčků.
 1. Spusť následující příkaz.
 ```
-sudo pacman -S --needed nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
+sudo pacman -S --needed nvidia-dkms nvidia-settings nvidia-utils lib32-nvidia-utils vulkan-icd-loader lib32-vulkan-icd-loader libvdpau lib32-libvdpau libxnvctrl opencl-nvidia lib32-opencl-nvidia cuda lib32-libvdpau
 ```
 ## Konfigurace - načtení důležitých modulů.
 1. Do terminálu zadej ```sudo nano /etc/mkinitcpio.conf```
@@ -53,4 +53,3 @@ MODULES=(modul1 modul2 modul3 nvidia)
 
 <dd>Zdroje:</dd>
 <dd>https://github.com/lutris/docs/blob/master/InstallingDrivers.md</dd>
-
